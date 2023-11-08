@@ -1,0 +1,94 @@
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.navBar {
+  order: 1;
+  animation: fadeIn 2s ease-in;
+  opacity: 1;
+  z-index: 100;
+  height: auto;
+  color: #fff;
+  background-color: transparent;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0;
+  padding: 20px 24px;
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  will-change: transform;
+  transform: translate3d(0px, -0.91776%, 0px) scale3d(1, 1, 1) rotateX(0deg)
+    rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+  transform-style: preserve-3d;
+}
+.navBarWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  & .logo {
+    padding-top: 4px;
+  }
+  & .navMenuWrapper {
+    height: 66px;
+    justify-content: flex-end;
+    align-items: center;
+    display: flex;
+
+    & .navMenu {
+      height: 66px;
+      align-items: center;
+      padding-left: 23px;
+      padding-right: 36px;
+      display: flex;
+      & a {
+        margin-left: 30px;
+        text-decoration: none;
+        color: white;
+        line-height: 24px;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    & .westButton {
+      height: 35px;
+      color: black;
+      padding-inline: 22px 22px;
+      &:hover {
+        box-shadow: 0px 15px 25px 0px rgba(130, 124, 147, 0.66);
+      }
+    }
+    & .eastButton {
+      height: 35px;
+      background: linear-gradient(to bottom, #a8dc19, #42ae13);
+      margin-left: 10px;
+      color: white;
+      padding-inline: 24px 24px;
+      &:hover {
+        box-shadow: 0px 15px 25px 0px rgba(66, 174, 19, 0.66);
+      }
+    }
+  }
+}
+.Button {
+  display: flex;
+  align-items: center;
+  text-decoration-line: none;
+  background: white;
+  border-radius: 6px;
+  text-align: center;
+  font-size: 15px;
+  padding: 12px;
+  box-shadow: 0px 3px 9px -3px #706a6a;
+}

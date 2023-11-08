@@ -1,0 +1,125 @@
+:root {
+  /* background: green; */
+  font-family: Roboto, sans-serif;
+  line-height: 21px;
+}
+.section {
+  height: 100dvh;
+}
+.sectionMain {
+  height: 100dvh;
+  background-color: rgba(22, 139, 7, 0.863);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* padding: 60px 24px; */
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+@keyframes bounce {
+  0% {
+    opacity: 0;
+    transform: rotate(10deg) translateY(100px); /* Starte bei 20 Grad Rotation und 100px nach unten verschoben */
+  }
+
+  100% {
+    opacity: 1;
+    transform: rotate(0deg) translateY(0); /* Beende bei 0 Grad Rotation und normaler Position */
+  }
+}
+.heroImage {
+  /* z-index: 2; */
+  /* animation-delay: 1s; */
+  width: 44%;
+  background-image: url("https://uploads-ssl.webflow.com/5b8055e9a6d81643508ad243/5cc2fc3ea3497654ff95e2dc_webentwicklung-magdeburg-2018.png");
+  background-position: 50% 45%;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+
+  animation: bounce 1s ease-in-out;
+}
+@keyframes fadeInFromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.wrapper {
+  /* z-index: 3; */
+  width: 100%;
+  max-width: 1200px;
+  background-color: transparent;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: relative;
+  & .heroIntro {
+    width: 50%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    /* margin-top: 93px; */
+    margin-bottom: 220px;
+    padding-left: 15px;
+    padding-right: 6%;
+    display: flex;
+    color: white;
+    opacity: 0;
+    transform: translateX(
+      100%
+    ); /* Verschiebe das Element aus dem Bildschirmbereich */
+    /* animation: fadeInFromRight 1s ease forwards; */
+    animation: fadeInFromRight 0.6s ease-in 0.7s forwards; /* Einblendung mit 2 Sekunden Verzögerung */
+
+    & .heroHead {
+      height: 15px;
+      border: 1px solid #dce0e9;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      border-radius: 4px;
+      /* margin-bottom: 5px; */
+      padding: 4px 8px 4px 9px;
+      font-size: 11px;
+      font-weight: 500;
+      line-height: 16px;
+      display: inline-block;
+    }
+    & .heroTitle {
+      & h1 {
+        font-size: 40px;
+        line-height: 40px;
+      }
+    }
+    & .heroButton {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      margin-top: 20px;
+      height: 50px;
+      width: 200px;
+      border: 1px solid #dce0e9;
+      border-radius: 4px;
+      & a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+      }
+    }
+  }
+}
+.wrapper.flexEnd {
+  opacity: 1;
+  align-items: flex-end;
+}
